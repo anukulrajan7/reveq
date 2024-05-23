@@ -123,7 +123,7 @@ function Home() {
                     <div className='p-3  overflow-hidden order-2 md:order-1'>
                         <video src={videoFrame1} autoPlay loop muted className='w-full h-[300px] object-cover rounded-[40px]'></video>
                     </div>
-                    <div className='p-5 flex flex-col items-start gap-[1rem]'>
+                    <div className='p-5 flex flex-col items-start gap-[1rem] order-2'>
                         <h1 className='text-[2rem] md:text-[3rem] lg:text-[3rem] text-[#0c0f12] inter-font md:font-semibold md:text-start font-[500]  text-center md:leading-tight'>Find A Connection's Recent Activity</h1>
                         <p className='text-gray-500 text-center md:text-start '>Always know which post they are engaging with</p>
                         {/* <button className='cursor-pointer  bg-[#0070f3] tracking-normal   text-white font-semibold md:text-[1rem] py-3 px-7 rounded-lg'>See related intregation</button> */}
@@ -143,7 +143,7 @@ function Home() {
                     <div className='p-3  overflow-hidden order-2 md:order-1'>
                         <video src={videoFrame1} autoPlay loop muted className='w-full h-[300px] object-cover rounded-[40px]'></video>
                     </div>
-                    <div className='p-5 flex flex-col items-start gap-[1rem]'>
+                    <div className='p-5 flex flex-col items-start gap-[1rem] order-2'>
                         <h1 className='text-[2rem] md:text-[3rem] lg:text-[3rem] text-[#0c0f12] inter-font md:font-semibold md:text-start text-center font-[500] md:leading-tight'>Engage With Your Prospects</h1>
                         <p className='text-gray-500 md:text-start text-center'>Get AI-powered insights based on relevancy & recency</p>
                         {/* <button className='cursor-pointer  bg-[#0070f3] tracking-normal   text-white font-semibold md:text-[1rem] py-3 px-7 rounded-lg'>See related intregation</button> */}
