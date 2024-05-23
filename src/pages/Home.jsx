@@ -94,12 +94,15 @@ function Home() {
 
         const element = document.getElementById(location.hash?.split("#")[1])
         console.log(element, location)
-        setTimeout(() => {
+        const timeout = setTimeout(() => {
             window.scrollTo({
                 behavior: 'smooth',
                 top: element.offsetTop - 100 // Adjust the offset as needed
             });
         }, 200)
+        return () => {
+            clearTimeout(timeout)
+        }
     }, [location.hash])
     return (
         <div className='md:w-[90%] flex flex-col w-full items-center justify-center px-4 mx-auto  my-[1rem] mt-[9rem] lg:mt-[4rem] z-0'>
