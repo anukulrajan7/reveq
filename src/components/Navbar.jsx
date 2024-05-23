@@ -10,7 +10,17 @@ function Navbar() {
     const toggleMenu = () => {
         setIsOpen(!isOpen);
     };
-    console.log(location)
+
+    const scrollToElement = (id) => {
+        const element = document.getElementById(id);
+        if (element) {
+            window.scrollTo({
+                behavior: 'smooth',
+                top: element.offsetTop - 0 // Adjust the offset as needed
+            });
+        }
+    };
+
     return (
         <nav className='bg-white shadow-md fixed top-0 left-0 right-0 z-10'>
             <div className='mx-auto px-4 sm:px-6 lg:px-8 max-w-[1272px]'>
@@ -23,14 +33,14 @@ function Navbar() {
                     </div>
                     <div className='hidden sm:block '>
                         <div className='flex space-x-4'>
-                            <a href="#home" className={'text-gray-700 hover:bg-[#f2f2f275] px-3 py-2 rounded-md text-sm font-medium ' + (location?.hash === "#home" ? "bg-[#f2f2f275]" : "bg-transparent")}>Home</a>
-                            <a href="#feature" className={'text-gray-700 hover:bg-[#f2f2f275] px-3 py-2 rounded-md text-sm font-medium ' + (location?.hash === "#feature" ? "bg-[#f2f2f275]" : "bg-transparent")}>Features</a>
-                            <a href="#pricing" className={'text-gray-700 hover:bg-[#f2f2f275] px-3 py-2 rounded-md text-sm font-medium ' + (location?.hash === "#pricing" ? "bg-[#f2f2f275]" : "bg-transparent")}>Pricing</a>
+                            <a href="#home" className='hover:bg-[#f2f2f275] px-2 py-2 rounded-md' onClick={() => scrollToElement('home')}>Home</a>
+                            <a href="#feature" className='hover:bg-[#f2f2f275] px-2 py-2 rounded-md' onClick={() => scrollToElement('feature')}>Features</a>
+                            <a href="#pricing" className='hover:bg-[#f2f2f275] px-2 py-2 rounded-md' onClick={() => scrollToElement('pricing')}>Pricing</a>
                         </div>
 
                     </div>
                     <div className='hidden sm:block'>
-                        <div className='flex items-center'>
+                        <div className='flex items-center gap-2'>
                             <button className='border border-gray-200 px-4 py-2 rounded-md text-sm font-medium hover:bg-[#f2f2f275]'>Login</button>
                             <button className='border border-gray-200 px-4 py-2 rounded-md text-sm font-medium hover:bg-[#f2f2f275]'>Sign Up</button>
                         </div>
